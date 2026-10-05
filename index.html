@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashok Kumavat — Social Media & Content</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1EFFA;--ink:#17122E;--mute:#5d5877;--blue:#3B2BFF;--tang:#FF7A3D;--lem:#F2E75C;--card:#fff;--line:#d8d4ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120F24;--ink:#EFEDFB;--mute:#a29db9;--blue:#8E84FF;--card:#1c1838;--line:#332d57}}
+:root[data-theme="dark"]{--bg:#120F24;--ink:#EFEDFB;--mute:#a29db9;--blue:#8E84FF;--card:#1c1838;--line:#332d57}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 "Bricolage Grotesque",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:96px 0}
+h2{font-weight:800;font-size:clamp(34px,7vw,72px);line-height:.98;letter-spacing:-.03em;margin-bottom:22px}
+h3{font-weight:700;font-size:22px;line-height:1.15}
+.sub{color:var(--mute);max-width:56ch}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+nav .logo{font-weight:800;text-decoration:none;letter-spacing:-.02em}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-size:15px;font-weight:500}
+.links a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer;font-family:inherit;font-size:16px}
+.btn:hover{transform:translateY(-3px) rotate(-1deg);background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.sm{padding:9px 18px;font-size:14px}
+.burger{display:none;background:none;border:0;font-size:26px;color:var(--ink);cursor:pointer}
+@media(max-width:760px){.burger{display:block}.links{position:absolute;left:0;right:0;top:100%;background:var(--bg);flex-direction:column;align-items:flex-start;padding:18px 22px 26px;gap:16px;border-bottom:1px solid var(--line);display:none}.links.open{display:flex}}
+.hero{min-height:calc(100vh - 62px);display:flex;flex-direction:column;justify-content:center;padding:48px 0 24px}
+.status{display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.04em;background:var(--lem);color:#17122E;padding:8px 14px;border-radius:999px;margin-bottom:28px}
+.dot{width:9px;height:9px;border-radius:50%;background:#17a34a;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.name{font-weight:800;font-size:clamp(54px,15.5vw,210px);line-height:.86;letter-spacing:-.055em}
+.name span{display:inline-block;transition:transform .25s,color .25s}
+.name span:hover{transform:translateY(-.08em) rotate(-4deg);color:var(--blue)}
+.pos{font-size:clamp(15px,2.6vw,26px);font-weight:700;margin:22px 0 6px;letter-spacing:.02em}
+.tag{font-size:clamp(22px,4vw,40px);line-height:1.1;margin-bottom:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.load{opacity:0;transform:translateY(24px);animation:in .8s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.marq{overflow:hidden;background:var(--ink);color:var(--bg);padding:16px 0;white-space:nowrap}
+.marq div{display:inline-block;animation:slide 28s linear infinite;font-weight:800;font-size:22px}
+.marq b{color:var(--tang);margin:0 18px}
+@keyframes slide{to{transform:translateX(-50%)}}
+.tldr{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:30px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.tile:nth-child(1){background:var(--blue);color:#fff;border-color:var(--blue)}
+.tile p{color:inherit;opacity:.85;margin-top:8px}
+.why{background:var(--ink);color:var(--bg)}
+.why .sub{color:inherit;opacity:.8}
+.why .lines{display:grid;gap:12px;margin-top:30px;max-width:720px}
+.why .lines p{font-size:clamp(20px,3vw,30px);line-height:1.2;border-left:4px solid var(--tang);padding-left:16px}
+.why .lines p b{color:var(--lem)}
+.skgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:30px}
+.sk h3{margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink);font-size:14.5px;font-weight:500;transition:background .2s,color .2s,transform .2s;opacity:0;transform:translateY(10px)}
+.sk.on .chip{opacity:1;transform:none;transition-delay:calc(var(--i)*70ms)}
+.chip:hover{background:var(--lem);color:#17122E;border-color:var(--lem);transform:scale(1.06)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.tab{padding:11px 18px;border-radius:999px;border:1.5px solid var(--ink);background:none;color:var(--ink);font:700 15px inherit;font-family:inherit;cursor:pointer}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,40px);display:none}
+.panel.on{display:block;animation:in .5s forwards}
+.badge{display:inline-block;background:var(--tang);color:#17122E;font-size:12px;font-weight:800;letter-spacing:.05em;padding:5px 10px;border-radius:6px;margin-bottom:14px}
+.cols{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px}
+.cols h4{font-size:14px;color:var(--blue);margin-bottom:6px}
+.cols ul{padding-left:18px;color:var(--mute)}
+.post{background:var(--bg);border:1px dashed var(--mute);border-radius:16px;padding:16px;margin-top:10px}
+.ph{background:var(--lem);color:#17122E;padding:2px 8px;border-radius:5px;font-size:13px;font-weight:700}
+.feed{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:30px}
+.fc{aspect-ratio:4/5;border-radius:22px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;border:0;cursor:pointer;font-family:inherit;color:#17122E;transition:transform .25s}
+.fc:hover{transform:translateY(-6px) rotate(-1.2deg)}
+.fc small{font-weight:800;letter-spacing:.06em}
+.fc strong{font-size:21px;line-height:1.12;letter-spacing:-.01em}
+.fc:nth-child(1){background:var(--tang)}.fc:nth-child(2){background:var(--lem)}.fc:nth-child(3){background:#BFB6FF}.fc:nth-child(4){background:#fff}.fc:nth-child(5){background:#9BE3C4}
+.flow{display:grid;gap:12px;margin-top:30px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;position:relative}
+.step b{display:block;font-size:20px;margin-bottom:4px}
+.step p{font-size:14.5px;color:var(--mute)}
+.bring{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-top:30px}
+.bring .tile h3{margin-bottom:12px}
+.bring li{margin:0 0 6px 18px;color:var(--mute)}
+.edu{border-top:2px solid var(--ink);margin-top:40px;padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.human p{font-size:clamp(24px,4.2vw,42px);line-height:1.15;max-width:22em}
+.final{background:var(--blue);color:#fff;text-align:left}
+.final h2{font-size:clamp(40px,10vw,128px)}
+.final .btn{background:#fff;color:#17122E;border-color:#fff}
+.final .btn:hover{background:var(--lem);border-color:var(--lem);color:#17122E}
+.final .btn.ghost{background:transparent;color:#fff}
+.det{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-weight:700}
+.modal{position:fixed;inset:0;background:rgba(10,8,30,.62);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
+.modal.on{display:flex}
+.sheet{background:var(--bg);color:var(--ink);border-radius:26px;max-width:620px;width:100%;max-height:88vh;overflow:auto;padding:30px;animation:in .35s forwards}
+.sheet h3{font-size:30px;margin:6px 0 10px}
+.sheet dt{font-weight:800;color:var(--blue);margin-top:14px;font-size:14px}
+.sheet dd{margin:2px 0 0}
+.x{float:right}
+.cur{position:fixed;width:34px;height:34px;border:2px solid var(--blue);border-radius:50%;pointer-events:none;z-index:60;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;display:none}
+.cur.big{width:60px;height:60px;background:color-mix(in srgb,var(--blue) 18%,transparent)}
+@media(hover:hover) and (pointer:fine){.cur{display:block}}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.load,.chip{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<nav><div class="wrap">
+<a class="logo" href="#top">ASHOK</a>
+<button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+<div class="links" id="lk"><a href="#work">WORK</a><a href="#about">ABOUT</a><a href="#skills">SKILLS</a><a href="#contact">CONTACT</a><a class="btn sm" href="#contact">LET'S TALK →</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="status load"><i class="dot"></i>OPEN TO SOCIAL MEDIA &amp; CONTENT OPPORTUNITIES</div>
+<h1 class="name load" style="animation-delay:.1s" id="nm">ASHOK KUMAVAT</h1>
+<p class="pos load" style="animation-delay:.25s">SOCIAL MEDIA • CONTENT • COMMUNICATION</p>
+<p class="tag serif load" style="animation-delay:.35s">I turn ideas into content people actually want to stop scrolling for.</p>
+<p class="sub load" style="animation-delay:.45s">I come from an analytical, communication-heavy academic background: science, maths, debating and quizzing. Now I'm taking those skills into social media, content and digital communication.</p>
+<div class="cta load" style="animation-delay:.55s"><a class="btn" href="#work">VIEW MY WORK →</a><a class="btn ghost" href="#contact">LET'S TALK →</a></div>
+</div></header>
+
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="about"><div class="wrap">
+<h2>THE 10-SECOND VERSION</h2>
+<p class="sub">Physical Sciences graduate. Strong on communication, public speaking, analytical thinking and presentations. Building a career in social media and content. My edge is structured thinking delivered in clear, engaging communication.</p>
+<div class="tldr">
+<div class="tile"><h3>Who</h3><p>Ashok, B.Sc Physical Sciences, Delhi University, based in Surat.</p></div>
+<div class="tile"><h3>Good at</h3><p>Explaining things well, spotting the interesting angle, building clear presentations.</p></div>
+<div class="tile"><h3>Looking for</h3><p>Entry-level Social Media Manager / Executive / Content roles.</p></div>
+<div class="tile"><h3>Languages</h3><p>English, Hindi, Gujarati.</p></div>
+</div></div></section>
+
+<section class="why"><div class="wrap">
+<h2>WHY SOCIAL?</h2>
+<p class="sub">I come from a science and mathematics background, but the part I've always enjoyed most is taking information, finding the interesting angle, and communicating it in a way people understand.</p>
+<div class="lines">
+<p><b>Debating</b> taught me how to hold attention.</p>
+<p><b>Quizzing</b> taught me how to research, think quickly and find interesting information.</p>
+<p><b>Presentations</b> taught me how to structure information visually.</p>
+<p>Now I want to apply all of it to <b>content, social media and digital storytelling.</b></p>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>SKILLS, SORTED</h2>
+<div class="skgrid" id="sg"></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+<h2>IF I RAN YOUR SOCIALS...</h2>
+<p class="sub">Five formats, five concepts. Tap a card to open the thinking behind it. All concepts are hypothetical.</p>
+<div class="feed" id="fd"></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>HOW I THINK ABOUT CONTENT</h2>
+<div class="flow" id="fl"></div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+<h2>WHAT I BRING TO THE TABLE</h2>
+<p class="sub">Real college experience, framed honestly as transferable skills. None of it was a social media job.</p>
+<div class="bring">
+<div class="tile"><h3>Debating Society, Ramjas College</h3><ul><li>Public speaking</li><li>Articulation</li><li>Structured arguments</li><li>Communicating ideas to different audiences</li><li>Understanding other perspectives</li></ul></div>
+<div class="tile"><h3>QNIGHTS Quizzing Society, Ramjas College</h3><ul><li>Research</li><li>Information recall</li><li>Quick thinking and problem solving</li><li>Curiosity</li><li>Collaboration</li></ul></div>
+<div class="tile"><h3>Physical Sciences, Ramjas College</h3><ul><li>Analytical thinking</li><li>Statistics and mathematics</li><li>Structured problem solving</li><li>Python</li><li>Learning complex concepts fast</li></ul></div>
+</div>
+<div class="edu"><div><h3>Ramjas College, University of Delhi</h3><p class="sub">B.Sc Physical Sciences, 2023–2026, 74.24%</p></div><p class="sub">Linear Algebra • Calculus • Probability • Statistics • Python Programming</p></div>
+</div></section>
+
+<section class="human"><div class="wrap">
+<h2>BEYOND THE BULLET POINTS.</h2>
+<p class="serif">I'm the person who falls down a rabbit hole at 1 a.m. and surfaces with a fact I now need to tell someone. I like ideas, how the internet talks, and working out why one post makes you stop scrolling while another doesn't. I'm still learning, and I'd rather say so than pretend otherwise.</p>
+</div></section>
+
+<section class="final" id="contact"><div class="wrap">
+<h2>HAVE SOMETHING WORTH TALKING ABOUT?</h2>
+<p style="font-size:22px">I'd love to help turn it into content.</p>
+<div class="cta"><a class="btn" href="mailto:ashokasus21@gmail.com">EMAIL ME</a></div>
+<div class="det"><span>ashokasus21@gmail.com</span><span>8758696259</span><span>Surat, Gujarat</span></div>
+</div></section>
+
+<div class="modal" id="md"><div class="sheet" role="dialog" aria-modal="true"><button class="btn sm ghost x" id="cl">Close ✕</button><div id="mc"></div></div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const ph=t=>`<span class="ph">[${t}]</span>`;
+/* nav */
+$('#bg').onclick=e=>{const o=$('#lk').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+$('#lk').onclick=e=>{if(e.target.tagName==='A')$('#lk').classList.remove('open')};
+/* name letters + marquee */
+$('#nm').innerHTML=[...'ASHOK KUMAVAT'].map(c=>c===' '?'<br>':`<span>${c}</span>`).join('');
+$('#mq').innerHTML=('<span>HOOKS<b>✦</b>STORIES<b>✦</b>CAROUSELS<b>✦</b>REELS<b>✦</b>CAPTIONS<b>✦</b>RESEARCH<b>✦</b>IDEAS<b>✦</b></span>').repeat(8);
+/* skills */
+const S={CONTENT:['Content Ideation','Storytelling','Research','Copywriting','Content Planning','Presentation'],COMMUNICATION:['Public Speaking','Audience Communication','Debating','Persuasion','Articulation'],THINKING:['Critical Thinking','Analytical Thinking','Problem Solving','Information Research','Quick Reasoning'],TOOLS:['Microsoft PowerPoint','Microsoft Word','Microsoft Excel','Python','Digital/IT Tools']};
+$('#sg').innerHTML=Object.entries(S).map(([k,v])=>`<div class="sk tile"><h3>${k}</h3><div class="chips">${v.map((x,i)=>`<span class="chip" style="--i:${i}">${x}</span>`).join('')}</div></div>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.3});
+document.querySelectorAll('.sk').forEach(n=>io.observe(n));
+/* feed */
+const F=[
+['REEL','3 things nobody tells you about ___','Fill the blank with any niche topic.','Open on the surprising third thing, then count up from one. Fast cuts, on-screen text, answer in under 30 seconds.','The curiosity gap makes people watch to the end.'],
+['CAROUSEL','5 mistakes brands make on Instagram','Slide 1: the mistake as a bold claim. Slides 2–5: each mistake with one fix. Last slide: a question.','Plain-language, one idea per slide, a save-worthy checklist at the end.','Carousels get saved and re-read, and the last-slide question invites comments.'],
+['STORY','Poll, question, interactive','A 3-frame story: poll ("Team A or B?"), question sticker, then the reveal of what the audience chose.','Keep it playful and low-effort to answer.','Taps are easy, and results give you free audience insight.'],
+['MEME','A relevant cultural moment','Pick a shared, current moment the brand\'s audience already jokes about, and add one on-brand twist. '+ph('ADD MEME EXAMPLE'),'Speed matters, and so does knowing when to skip a trend that doesn\'t fit the brand.','People share what feels like an inside joke they belong to.'],
+['EDUCATIONAL','Simple explainer','Take one complicated idea and explain it with a single analogy and a three-part structure: what, why, so what.','My science and debating background helps here: structure first, then simplify.','Clear explanations earn trust and shares.']];
+$('#fd').innerHTML=F.map((f,i)=>`<button class="fc" data-i="${i}"><small>${f[0]}</small><strong>${f[1]}</strong><small>OPEN →</small></button>`).join('');
+$('#fd').onclick=e=>{const b=e.target.closest('.fc');if(!b)return;const f=F[b.dataset.i];$('#mc').innerHTML=`<span class="badge">CONTENT CONCEPT · HYPOTHETICAL</span><h3>${f[1]}</h3><dl><dt>Format</dt><dd>${f[0]}</dd><dt>Concept</dt><dd>${f[2]}</dd><dt>Execution</dt><dd>${f[3]}</dd><dt>Why it could work</dt><dd>${f[4]}</dd></dl>`;$('#md').classList.add('on');$('#cl').focus()};
+const close=()=>$('#md').classList.remove('on');$('#cl').onclick=close;$('#md').onclick=e=>{if(e.target.id==='md')close()};addEventListener('keydown',e=>e.key==='Escape'&&close());
+/* process */
+$('#fl').innerHTML=[['Research','What does the audience already care about?'],['Idea','Find the interesting angle.'],['Hook','Win the first two seconds.'],['Story','Give it a beginning, middle and payoff.'],['Format','Reel, carousel, story or post: pick what fits.'],['Publish','Right place, right time, clear caption.'],['Learn','Check what worked and change the next one.']].map((s,i)=>`<div class="step"><b>${i+1}. ${s[0]}</b><p>${s[1]}</p></div>`).join('');
+/* cursor */
+const c=$('#cur');addEventListener('pointermove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';c.classList.toggle('big',!!e.target.closest('a,button'))});
+</script>
+</body>
+</html>
